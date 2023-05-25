@@ -23,7 +23,7 @@ class Account:
     def print_statement(self):
         transactions = self.deposits + self.withdrawals
         for transaction in transactions:
-            print(f"{transaction['narration']} - {transaction['amount']}")
+           return(f"{transaction['narration']} - {transaction['amount']}")
 
     def borrow_loan(self, amount):
         if self.loan_balance > 0:
@@ -43,30 +43,3 @@ class Account:
         
 
 
-my_account = Account("serah", 1000)
-
-
-my_account.deposit(500)
-
-
-my_account.withdrawal(200)
-
-print("Current balance:", my_account.check_balance())
-
-
-print("Deposits:")
-for deposit in my_account.deposits:
-    print(f"{deposit['narration']} - {deposit['amount']}")
-
-print("Withdrawals:")
-for withdrawal in my_account.withdrawals:
-    print(f"{withdrawal['narration']} - {withdrawal['amount']}")
-
-
-print(my_account.borrow_loan(400))
-
-
-print("Loan balance:", my_account.loan_balance)
-
-# print("Account statement:")
-my_account.print_statement()

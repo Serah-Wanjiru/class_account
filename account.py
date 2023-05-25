@@ -62,29 +62,5 @@ class Account:
             self.current_balance -= amount
             recipient_account.current_balance += amount
         else:
-            print("no balance to transfer the requested amount.")
+            return("no balance to transfer the requested amount.")
             
-my_account = Account(1500)
-
-my_account.deposit(500)
-
-
-my_account.withdrawal(300)
-
-
-print("Current balance:", my_account.check_balance())
-
-
-print("Account statement:")
-my_account.print_statement()
-
-my_account.borrow_loan(300)
-
-
-my_account.repay_loan(400)
-
-recipient_account = Account(0)
-my_account.transfer(100, recipient_account)
-
-print("Current balance :", my_account.check_balance())
-print(" recipient account balance:", recipient_account.check_balance())            
